@@ -5,6 +5,7 @@ go 1.18
 require (
 	github.com/apache/thrift v0.19.0
 	github.com/cloudwego/kitex v0.8.0
+	github.com/luci/go-render v0.0.0-20160219211803-9a04cc21af0f
 )
 
 require (

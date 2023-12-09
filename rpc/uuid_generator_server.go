@@ -8,6 +8,7 @@ import (
 	"uuid_client/utils"
 
 	"github.com/cloudwego/kitex/client"
+	"github.com/luci/go-render/render"
 )
 
 var uuidClient uuidgeneratorserver.Client
@@ -35,6 +36,6 @@ func GetUUIDBounds(ctx context.Context, count, bizCode int64) ([]*server.UUIDBou
 		return nil, false
 	}
 
-	fmt.Printf("resp:%v", resp)
+	fmt.Printf("resp:%v", render.Render(resp.UuidBounds))
 	return resp.UuidBounds, true
 }

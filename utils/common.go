@@ -6,6 +6,13 @@ func Int64Ptr(i64 int64) *int64 {
 	return &i64
 }
 
+func Int64(i64Ptr *int64) int64 {
+	if i64Ptr == nil {
+		return 0
+	}
+	return *i64Ptr
+}
+
 func StringPtr(str string) *string {
 	return &str
 }
