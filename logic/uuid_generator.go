@@ -39,6 +39,7 @@ func NewUUIDGenerator(opts ...Option) *UUIDGenerator {
 
 func (u *UUIDGenerator) Close() {
 	atomic.StoreInt32(&u.isClose, 1)
+	close(u.uuidChan)
 }
 
 func (u *UUIDGenerator) cycleCheck() {
