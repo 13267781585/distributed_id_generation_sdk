@@ -3,12 +3,13 @@ package rpc
 import (
 	"context"
 	"fmt"
-	"uuid_client/kitex_gen/uuid/generator/server"
-	"uuid_client/kitex_gen/uuid/generator/server/uuidgeneratorserver"
-	"uuid_client/utils"
 
 	"github.com/cloudwego/kitex/client"
 	"github.com/luci/go-render/render"
+
+	"uuid_client/kitex_gen/uuid/generator/server"
+	"uuid_client/kitex_gen/uuid/generator/server/uuidgeneratorserver"
+	"uuid_client/utils"
 )
 
 var uuidClient uuidgeneratorserver.Client
